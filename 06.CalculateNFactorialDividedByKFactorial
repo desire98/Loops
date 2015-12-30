@@ -1,0 +1,28 @@
+using System;
+
+class NFDividedByKF
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter two numbers in the range (1 < k < n < 100)");
+        int n = int.Parse(Console.ReadLine());
+        int k = int.Parse(Console.ReadLine());
+        if (k <= 1 || k > n || n >= 100 || k >= 100)
+        {
+            Console.WriteLine("Invalid!");
+            return;
+        }
+        int facN = 1;
+        int facK = 1;
+        for (int i = 1; i <= n; i++)
+        {
+            facN *= i;
+            if (i <= k)
+            {
+                facK *= i;
+            }
+        }
+        Console.WriteLine("The sum of N! Divided By K! is: {0}", facN / facK);
+    }
+}
+
