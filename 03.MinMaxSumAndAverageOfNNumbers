@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class MinMaxSumAndAvg
+{
+    static void Main()
+    {
+        Console.WriteLine("How many numbers are you gonna enter?");
+        int n = int.Parse(Console.ReadLine());
+        List<double> list = new List<double>();
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine("Enter number");
+            list.Add(double.Parse(Console.ReadLine()));
+        }
+        Console.WriteLine("Min: {0}", list.Min());
+        Console.WriteLine("Max: {0}", list.Max());
+        Console.WriteLine("Sum: {0}", list.Sum());
+        Console.WriteLine("Average: {0:F2}", list.Average());
+
+    }
+}
+
